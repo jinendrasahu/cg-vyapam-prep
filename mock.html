@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>मॉक टेस्ट — CG व्यापम सहायक ग्रेड-3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">सहायक ग्रेड-3 किट</a>
+  <span class="title">पूर्ण मॉक टेस्ट</span>
+  <span class="spacer"></span>
+  <button class="btn small" id="theme-btn" type="button" title="रंग बदलें">◐</button>
+</header>
+<div class="wrap">
+  <div class="card" id="setup">
+    <h1>पूर्ण मॉक टेस्ट — 100 प्रश्न</h1>
+    <p class="lead">वास्तविक परीक्षा के अनुपात में प्रश्न: सामान्य अध्ययन 30 (भारत 15 + छत्तीसगढ़ 15), कम्प्यूटर 20, मानसिक योग्यता 10, गणित 10, हिन्दी 20, अंग्रेज़ी 10। हर बार नए प्रश्न चुने जाते हैं।</p>
+    <p><label>समय: <select id="mins" class="btn">
+      <option value="120" selected>2 घंटे</option>
+      <option value="90">1 घंटा 30 मिनट</option>
+      <option value="75">1 घंटा 15 मिनट (कठिन अभ्यास)</option>
+    </select></label></p>
+    <p><label>ऋणात्मक अंकन: <select id="neg" class="btn">
+      <option value="0" selected>नहीं</option>
+      <option value="0.25">हर गलत उत्तर पर −¼</option>
+      <option value="0.33">हर गलत उत्तर पर −⅓</option>
+    </select></label></p>
+    <p class="tip">समय और ऋणात्मक अंकन आपकी परीक्षा की आधिकारिक अधिसूचना के अनुसार चुनें — व्यापम हर विज्ञापन में यह बताता है।</p>
+    <button class="btn primary" id="start" type="button" disabled>प्रश्न लोड हो रहे हैं…</button>
+  </div>
+  <div id="main"></div>
+</div>
+<script src="assets/manifest.js"></script>
+<script src="assets/app.js"></script>
+<script>CGV.initMock();</script>
+</body>
+</html>
