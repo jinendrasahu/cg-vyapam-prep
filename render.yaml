@@ -1,0 +1,21 @@
+# Render Static Site — https://dashboard.render.com
+# Option A: New → Blueprint → select this repo (uses this file)
+# Option B: New → Static Site → use the settings mirrored below
+services:
+  - type: web
+    name: cg-vyapam-prep
+    runtime: static
+    branch: main
+    # Already static HTML/CSS/JS — no framework build
+    buildCommand: "true"
+    staticPublishPath: .
+    envVars:
+      - key: SKIP_INSTALL_DEPS
+        value: "true"
+    headers:
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=86400
+      - path: /data/*
+        name: Cache-Control
+        value: public, max-age=3600
